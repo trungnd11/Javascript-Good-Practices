@@ -1,0 +1,5 @@
+String padding: 
+'abc'.padStart(6);          // '  abc'
+'abc'.padStart(6, '-');     // '--abc'
+'abc'.padEnd(6);            // 'abc  '
+'abc'.padEnd(6, '-');       // 'abc--'
