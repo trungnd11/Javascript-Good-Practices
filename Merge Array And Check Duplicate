@@ -1,0 +1,25 @@
+let a1 = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+  { id: 3, name: "bádfasdfasd" },
+  
+]
+
+let a2 = [
+  { id: 1, name: "a" },
+  { id: 4, name: "bbbbbb" }
+]
+
+function mergeDiffs(Schedulearray1, Schedulearray2) {
+    var secondArrayIDs = Schedulearray2.map(x=> x.id);
+    return Schedulearray1.filter(x=> !secondArrayIDs.includes(x.id)).concat(Schedulearray2);   
+}
+
+console.log(mergeDiffs(a1,a2));
+
+[
+  { id: 2, name: 'b' },
+  { id: 3, name: 'bádfasdfasd' },
+  { id: 1, name: 'a' },
+  { id: 4, name: 'bbbbbb' }
+]
